@@ -1,4 +1,4 @@
-# 🚀 Optimus Data Pipeline
+# Optimus Data Pipeline
 
 > **Hybrid Data Engineering System** for Financial Analysis.
 > *Automated ingestion, containerized storage, and object-oriented analysis.*
@@ -8,7 +8,7 @@
 ![Java](https://img.shields.io/badge/Java-Analysis_Core-orange?logo=openjdk)
 ![Python](https://img.shields.io/badge/Python-Ingestion-yellow?logo=python)
 
-## 📖 Overview
+## Overview
 **Optimus** is a proof-of-concept pipeline designed to simulate a real-world DataOps environment. It orchestrates the lifecycle of financial data (Bitcoin metrics) through distinct, decoupled layers:
 
 1.  **Ingestion Layer (Python):** Fetches real-time market data from external APIs.
@@ -16,7 +16,7 @@
 3.  **Analysis Layer (Java OOP):** Applies business logic to detect market trends (Bullish/Bearish).
 4.  **Orchestration (Bash):** Automates the entire workflow in a Linux environment.
 
-## 🏗 Architecture
+## Architecture
 
 | Component | Tech Stack | Responsibility |
 | :--- | :--- | :--- |
@@ -25,15 +25,35 @@
 | **Logic** | Java 17 (OOP) | Data processing, average calculation, and trend detection. |
 | **Control** | Bash Scripting | Crontab/Script based automation of the pipeline. |
 
-## 🛠 Prerequisites
+## Prerequisites
 * **OS:** Ubuntu Server / Linux (Recommended)
 * **Containerization:** Docker & Docker Compose
 * **Languages:** Python 3.10+, Java 17 (JDK)
 
-## 📂 Project Structure
+## Quick Start
+
+```bash
+cd ~/Workspace/Development/Projects/Optimus-Data-Pipeline
+```
+
+Run the pipeline in this order:
+
+1. Start infrastructure (`docker/`)
+2. Run ingestion (`ingestion/`)
+3. Run analysis (`analysis/`)
+4. Automate with scripts (`scripts/`)
+
+## Project Structure
 ```text
 Optimus-Data-Pipeline/
 ├── docker/         # Infrastructure as Code (Docker Compose)
 ├── ingestion/      # Python scripts for API Data Fetching
 ├── analysis/       # Java Source Code for Business Logic
 └── scripts/        # Bash orchestration scripts
+```
+
+## Notes
+
+- This repository is currently focused on local Linux workflows.
+- Keep infrastructure and business logic decoupled (as already designed).
+- Prefer running each layer independently first, then automate end-to-end.
